@@ -1,0 +1,35 @@
+# .NET build files
+bin/
+obj/
+
+# User-specific files
+*.user
+*.userosscache
+*.suo
+*.userprefs
+
+# Azure Web App publish folder
+publish/
+
+# SQLite database files
+*.db
+*.sqlite
+ToDo.db
+
+# Logs
+*.log
+
+# Dotnet tool folder
+/.dotnet-tools/
+
+# Mac system files
+.DS_Store
+
+# Windows system files
+Thumbs.db
+
+# Rider project files
+.idea/
+
+# VS Code workspace settings
+.vscode/
