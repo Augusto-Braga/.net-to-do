@@ -9,34 +9,34 @@ using to_do_api.Data;
 
 namespace to_do_api.Migrations
 {
-    [DbContext(typeof(ToDoContext))]
-    [Migration("20250106210104_InitialCreate")]
-    partial class InitialCreate
+  [DbContext(typeof(ToDoContext))]
+  [Migration("20250106210104_InitialCreate")]
+  partial class InitialCreate
+  {
+    /// <inheritdoc />
+    protected override void BuildTargetModel(ModelBuilder modelBuilder)
     {
-        /// <inheritdoc />
-        protected override void BuildTargetModel(ModelBuilder modelBuilder)
-        {
 #pragma warning disable 612, 618
-            modelBuilder.HasAnnotation("ProductVersion", "9.0.0");
+      modelBuilder.HasAnnotation("ProductVersion", "9.0.0");
 
-            modelBuilder.Entity("to_do_api.Models.ToDoItem", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("INTEGER");
+      modelBuilder.Entity("to_do_api.Models.ToDoItem", b =>
+          {
+            b.Property<int>("Id")
+                      .ValueGeneratedOnAdd()
+                      .HasColumnType("INTEGER");
 
-                    b.Property<bool>("IsCompleted")
-                        .HasColumnType("INTEGER");
+            b.Property<bool>("IsCompleted")
+                      .HasColumnType("INTEGER");
 
-                    b.Property<string>("Title")
-                        .IsRequired()
-                        .HasColumnType("TEXT");
+            b.Property<string>("Title")
+                      .IsRequired()
+                      .HasColumnType("TEXT");
 
-                    b.HasKey("Id");
+            b.HasKey("Id");
 
-                    b.ToTable("ToDoItems");
-                });
+            b.ToTable("ToDoItems");
+          });
 #pragma warning restore 612, 618
-        }
     }
+  }
 }
